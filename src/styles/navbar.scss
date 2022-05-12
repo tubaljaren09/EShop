@@ -1,0 +1,26 @@
+.navbar-main {
+  /* Grid from app-main */
+  grid-column: 1/2;
+  grid-row: 1/2;
+  .navbar-container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: 50px;
+      }
+    }
+    .button-container {
+      button {
+        padding: 10px 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
