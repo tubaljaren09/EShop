@@ -10,11 +10,19 @@ const Navbar = () => {
         </h1>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink className="underline" activeClassName="active" to="/">
+              Home
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink
+              className="underline"
+              activeClassName="active"
+              to="/products"
+            >
+              Products
+            </NavLink>
           </li>
           <li>About</li>
           <li>Contact</li>

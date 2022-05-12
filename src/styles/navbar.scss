@@ -1,4 +1,6 @@
 .navbar-main {
+  background: $dark;
+  color: $light;
   /* Grid from app-main */
   grid-column: 1/2;
   grid-row: 1/2;
@@ -9,17 +11,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h1 {
+      font-size: 40px;
+    }
     ul {
       list-style: none;
       li {
         display: inline;
-        margin-right: 50px;
+        margin: 0 20px;
+        font-size: 25px;
       }
     }
     .button-container {
       button {
         padding: 10px 20px;
-        margin-right: 20px;
+        margin-left: 20px;
+        background: transparent;
+        border: 1px solid $light;
+        color: $light;
+        border-radius: 10px;
+      }
+      button:hover {
+        background: $light;
+        color: $dark;
+        transition: all 0.25s ease-out;
       }
     }
   }

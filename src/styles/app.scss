@@ -1,7 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+$dark: #2e2d2d;
+$light: #ffffff;
 * {
   padding: 0;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Lato;
+}
+a {
+  text-decoration: none;
+  color: $light;
+}
+.active {
+  border-bottom: 2px solid #fff;
+}
+.underline {
+  display: inline;
+  padding-bottom: 5px;
+  position: relative;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: $light;
+  transition: width 0.25s ease-out;
+}
+.underline:hover::before {
+  width: 100%;
 }
 .app-main {
   width: 100%;

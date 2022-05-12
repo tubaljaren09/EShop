@@ -30,10 +30,10 @@ const Products = () => {
   const Loading = () => {
     return (
       <div className="skeleton">
-        <Skeleton height={200} width={1500} />
-        <Skeleton height={200} width={1500} />
-        <Skeleton height={200} width={1500} />
-        <Skeleton height={200} width={1500} />
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
       </div>
     );
   };
