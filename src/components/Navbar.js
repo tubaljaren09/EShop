@@ -9,16 +9,18 @@ const Navbar = () => {
           <NavLink to="/">ESHOP</NavLink>
         </h1>
         <ul>
-          <li>
-            <NavLink className="underline" activeClassName="active" to="/">
+          <li className="underline">
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/"
+            >
               Home
             </NavLink>
           </li>
 
-          <li>
+          <li className="underline">
             <NavLink
-              className="underline"
-              activeClassName="active"
+              className={({ isActive }) => (isActive ? "active" : "")}
               to="/products"
             >
               Products

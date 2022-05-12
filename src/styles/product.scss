@@ -7,5 +7,14 @@
     width: 80%;
     height: 100%;
     margin: auto;
+    .product-cards {
+      button {
+        padding: 10px 20px;
+        background: $dark;
+        color: $light;
+        border: 2px solid $light;
+        border-radius: 10px;
+      }
+    }
   }
 }

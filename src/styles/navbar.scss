@@ -27,9 +27,10 @@
         padding: 10px 20px;
         margin-left: 20px;
         background: transparent;
-        border: 1px solid $light;
+        border: 2px solid $light;
         color: $light;
         border-radius: 10px;
+        font-size: 15px;
       }
       button:hover {
         background: $light;

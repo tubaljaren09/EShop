@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { NavLink } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Product = () => {
   const { id } = useParams();
@@ -17,7 +20,14 @@ const Product = () => {
   }, []);
 
   const Loading = () => {
-    return <div>Loading...</div>;
+    return (
+      <div className="skeleton">
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
+        <Skeleton height={200} width={1540} />
+      </div>
+    );
   };
 
   const ShowProduct = () => {
@@ -30,6 +40,9 @@ const Product = () => {
         <h1>${product.price}</h1>
         <p>{product.description}</p>
         <button>Add to cart</button>
+        <button>
+          <NavLink to="/cart">Go to cart</NavLink>
+        </button>
       </div>
     );
   };
