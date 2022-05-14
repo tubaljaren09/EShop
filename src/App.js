@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Product from "./components/Product";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route exact path="/products" element={<Products />} />
         <Route exact path="/products/:id" element={<Product />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );

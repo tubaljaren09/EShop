@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { useDispatch } from "react-redux";
+import { addCart } from "../redux/actions";
 import { NavLink } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -8,6 +10,11 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addCart(product));
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -39,7 +46,7 @@ const Product = () => {
         <p>Rating {product.rating && product.rating.rate}</p>
         <h1>${product.price}</h1>
         <p>{product.description}</p>
-        <button>Add to cart</button>
+        <button onClick={() => addProduct(product)}>Add to cart</button>
         <button>
           <NavLink to="/cart">Go to cart</NavLink>
         </button>
