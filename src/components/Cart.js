@@ -25,49 +25,42 @@ const Cart = () => {
       </div>
     );
   };
+
   const cartItems = (product) => {
     return (
-      <>
-        <div className="item-main">
-          <div className="item-container">
-            <div className="item-cart">
-              <div className="left">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  height="200px"
-                  width="180px"
-                />
-              </div>
-              <div className="right">
-                <h3>{product.title}</h3>
-                <p>
-                  {product.qty} X ${product.price} = $
-                  {product.qty * product.price}
-                </p>
-                <button onClick={() => handleDel(product)}>+</button>
-                <button onClick={() => handleAdd(product)}>-</button>
-              </div>
-            </div>
+      <div key={product.id} className="item-main">
+        <div className="item-cart">
+          <div className="left">
+            <img
+              src={product.image}
+              alt={product.title}
+              height="200px"
+              width="180px"
+            />
+          </div>
+          <div className="right">
+            <h3>{product.title}</h3>
+            <p>
+              {product.qty} X ${product.price} = $
+              {product.qty * product.price.toFixed(2)}
+            </p>
+            <br />
+            <button onClick={() => handleAdd(product)}>+</button>
+            <button onClick={() => handleDel(product)}>-</button>
           </div>
         </div>
-      </>
+      </div>
     );
   };
   const buttons = () => {
     return (
-      <>
-        <div className="container">
-          <div className="row">
-            <NavLink
-              to="/checkout"
-              className="btn btn-outline-dark mb-5 w-25 mx-auto"
-            >
-              Proceed to Checkout
-            </NavLink>
-          </div>
+      <div className="container">
+        <div className="row">
+          <button>
+            <NavLink to="/checkout">Proceed to Checkout</NavLink>
+          </button>
         </div>
-      </>
+      </div>
     );
   };
 
